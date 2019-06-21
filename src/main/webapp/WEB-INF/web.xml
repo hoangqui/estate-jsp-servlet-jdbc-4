@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>estate-laptrinhweb-mvc-servlet</display-name>
+  <filter>
+    <filter-name>sitemesh</filter-name>
+    <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>sitemesh</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>searchBuilding</display-name>
+    <servlet-name>searchBuilding</servlet-name>
+    <servlet-class>com.laptrinhjavaweb.controller.admin.searchBuilding</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>searchBuilding</servlet-name>
+    <url-pattern>/searchBuilding</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchBuilding</display-name>
+    <servlet-name>SearchBuilding</servlet-name>
+    <servlet-class>com.laptrinhjavaweb.controller.admin.SearchBuilding</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchBuilding</servlet-name>
+    <url-pattern>/SearchBuilding</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateBuilding</display-name>
+    <servlet-name>CreateBuilding</servlet-name>
+    <servlet-class>com.laptrinhjavaweb.controller.admin.CreateBuilding</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateBuilding</servlet-name>
+    <url-pattern>/CreateBuilding</url-pattern>
+  </servlet-mapping>
 </web-app>

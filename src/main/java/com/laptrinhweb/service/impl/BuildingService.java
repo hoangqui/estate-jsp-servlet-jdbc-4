@@ -19,7 +19,7 @@ public class BuildingService implements IBuildingService{
 //		Long id = buildingRepository.insert(buildingEntity);
 //		System.out.println(id);
 //		buildingRepository.update(buildingEntity);
-		buildingRepository.delete(buildingEntity);
+//		buildingRepository.delete(buildingEntity);
 		
 		return null;
 	}

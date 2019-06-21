@@ -8,6 +8,7 @@
 <title>Lap trinh web</title>
 </head>
 <body>
+	<p>Xin chao java web</p>
 	<h1>${model.fullName}</h1>
 </body>
 </html>

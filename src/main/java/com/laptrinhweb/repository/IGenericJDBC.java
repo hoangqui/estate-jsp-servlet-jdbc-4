@@ -1,12 +1,9 @@
 package com.laptrinhweb.repository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
-import com.laptrinhweb.mapper.ResultSetMapper;
+import com.laptrinhweb.paging.Pageble;
 
 public interface IGenericJDBC<T> {
 	
@@ -14,7 +11,9 @@ public interface IGenericJDBC<T> {
    void update(String sql, Object...parameters);
    Long insert(String sql, Object...parameters);
    
+   List<T> findAll(Map<String, Object> properties, Pageble pageble, Object... where ) ;
    Long insert(Object object);
    void update(Object object);
-   void delete(Object object);
+   void delete(long id);
+   <T> T findById(long id);
 }
